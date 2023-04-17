@@ -1,9 +1,12 @@
 import React from 'react';
+import TodoInput from './components/TodoInput';
+import TodoList from './components/TodoList';
 
-const Todo = () => {
+const Todo: React.FC =  ()=> {
     return (
         <div>
-            1
+            <TodoInput />
+            <TodoList />
         </div>
     );
 };
