@@ -2,7 +2,7 @@ import React from 'react';
 import TodoInput from './components/TodoInput';
 import TodoList from './components/TodoList';
 
-const Todo: React.FC =  ()=> {
+const Todo = ()=> {
     return (
         <div>
             <TodoInput />
