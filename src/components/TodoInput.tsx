@@ -38,7 +38,10 @@ const TodoInput: React.FC = ()=> {
     }; 
 
     const checkBox = (id: number)=> {
-        setTodoList(todoList.map(data=> data.id === id ? {...data, checked: !data.checked} : data));
+        const newTodoList = todoList.map((data) =>
+            data.id === id ? { ...data, checked: !data.checked } : data
+        );
+        setTodoList(newTodoList);
     };
 
     const keydownEnter = (e: React.KeyboardEvent<HTMLInputElement>)=> {
