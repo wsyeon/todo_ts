@@ -60,14 +60,16 @@ const TodoInput: React.FC = ()=> {
     };
 
     return (
-        <div>
-            <div>
-                <div>
-                    오늘의 할 일
-                </div>
-                <div>
-                    <input type='text' onKeyDown={keydownEnter} onChange={onChange} value={inputText} placeholder='오늘 할 일' />
-                    <button onClick={onClick}>+</button>
+        <div style={{width: "100%", height: "100vh", display: "flex", justifyContent: "center", alignItems: "center"}}>
+            <div style={{border: "1px solid red", height: "95%", width: "50%", overflow: "scroll", overflowX: "hidden"}}>
+                <div style={{border: "1px solid blue"}}>
+                    <div>
+                        오늘의 할 일
+                    </div>
+                    <div>
+                        <input type='text' onKeyDown={keydownEnter} onChange={onChange} value={inputText} placeholder='오늘 할 일' />
+                        <button onClick={onClick}>+</button>
+                    </div>
                 </div>
                 <div>
                     {todoList.map((data, idx)=> (
